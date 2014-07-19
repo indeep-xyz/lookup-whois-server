@@ -1,0 +1,7 @@
+# swap files
+.*.~
+.*.swp
+
+# temp/lock file by this script
+*.~temp
+*.~lock
