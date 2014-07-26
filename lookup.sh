@@ -12,7 +12,6 @@
 
 
 
-
 # - - - - - - - - - - - - - - - - - -
 # functions
 
@@ -24,13 +23,14 @@
 function lookup_wsnet() {
 
   local server=
+  local text="`\
+      host -t a "${1}.whois-servers.net" \
+        | sed -n "s/.* is an alias for \([^ ]*\)\.$/\1/p"`"
 
-  host -t a "${1}.whois-servers.net" \
-    | sed -n "s/.* is an alias for \(.*\)\.$/\1/p" \
-    | while read line;
-    do
-      server=$line
-    done
+  for line in ${text[@]}
+  do
+    server="$line"
+  done
 
   echo $server
 }
@@ -48,6 +48,7 @@ function lookup_iana() {
 
 # = =
 # lookup by nic.*
+# __buggy
 #
 # args
 # $1 ... gTLD string
@@ -76,19 +77,9 @@ fi
 # domain name for passed gTLD
 
 WS=
-PID=$$
-
-# set timer, trap
-# ( sleep 10; kill -SIGALRM $PID ) &
-# BPID=$!
-# trap 'exit 1' SIGALRM
 
 WS=`lookup_iana $1`
 [ -z "$WS" ] && WS=`lookup_wsnet $1`
-[ -z "$WS" ] && WS=`lookup_nic $1`
+# [ -z "$WS" ] && WS=`lookup_nic $1`
 
 echo $WS
-
-# kill timer, trap
-# kill $BPID
-# trap SIGALRM
