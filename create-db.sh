@@ -173,7 +173,7 @@ readonly DB_FILENAME=whois-servers.csv
 readonly DB_MAIN="$PWD/$DB_FILENAME"
 
 # channel max
-declare -i CH_MAX=10
+declare -i CH_MAX=5
 
 # options
 
