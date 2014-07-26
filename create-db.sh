@@ -199,6 +199,6 @@ fi
 # - - - - - - - - - - - - - - - - - -
 # main
 
-# create temp file
+# create file
 create
 
