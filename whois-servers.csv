@@ -22,10 +22,12 @@ associates,whois.donuts.co
 at,whois.nic.at
 attorney,whois.rightside.co
 au,whois.audns.net.au
+auction,whois.donuts.co
 audio,whois.uniregistry.net
 autos,whois.afilias-srs.net
 aw,whois.nic.aw
 ax,whois.ax
+axa,whois.nic.axa
 az,whois.ripe.net
 ba,whois.ripe.net
 bar,whois.nic.bar
@@ -37,6 +39,7 @@ berlin,whois.nic.berlin
 best,whois.nic.best
 bg,whois.register.bg
 bi,whois1.nic.bi
+bid,whois.nic.bid
 bike,whois.donuts.co
 bio,whois.ksregistry.net
 biz,whois.biz
@@ -52,8 +55,10 @@ br,whois.registro.br
 brussels,whois.nic.brussels
 build,whois.nic.build
 builders,whois.donuts.co
+buzz,whois.nic.buzz
 bw,whois.nic.net.bw
 by,whois.cctld.by
+bz,bzwhois.verisign-grs.com
 bzh,whois-bzh.nic.fr
 ca,whois.cira.ca
 cab,whois.donuts.co
@@ -79,6 +84,8 @@ cheap,whois.donuts.co
 christmas,whois.uniregistry.net
 church,whois.donuts.co
 ci,whois.nic.ci
+citic,whois.nic.citic
+city,whois.donuts.co
 ck,whois.ck-nic.org.ck
 cl,whois.nic.cl
 claims,whois.donuts.co
@@ -114,6 +121,7 @@ cz,whois.nic.cz
 dance,whois.unitedtld.com
 dating,whois.donuts.co
 de,whois.denic.de
+deals,whois.donuts.co
 degree,whois.rightside.co
 democrat,whois.unitedtld.com
 dental,whois.donuts.co
@@ -144,7 +152,6 @@ equipment,whois.donuts.co
 es,whois.nic.es
 estate,whois.donuts.co
 eu,whois.eu
-eus,whois.eus.coreregistry.net
 events,whois.donuts.co
 exchange,whois.donuts.co
 expert,whois.donuts.co
@@ -232,6 +239,7 @@ ir,whois.nic.ir
 is,whois.isnic.is
 it,whois.nic.it
 je,whois.je
+jetzt,whois.nic.jetzt
 jo,whois.ripe.net
 jobs,jobswhois.verisign-grs.com
 joburg,joburg-whois.registry.net.za
@@ -246,11 +254,13 @@ kitchen,whois.donuts.co
 kiwi,whois.dot-kiwi.com
 koeln,whois-fe1.pdt.koeln.tango.knipp.de
 kr,whois.kr
+kred,whois.nic.kred
 kz,whois.nic.kz
 la,whois.nic.la
 land,whois.donuts.co
 lawyer,whois.rightside.co
 lease,whois.donuts.co
+LGBT,whois.afilias.net
 li,whois.nic.li
 life,whois.donuts.co
 lighting,whois.donuts.co
@@ -287,6 +297,7 @@ mn,whois.nic.mn
 mo,whois.monic.mo
 mobi,whois.dotmobiregistry.net
 moda,whois.unitedtld.com
+moe,whois.nic.moe
 monash,whois.nic.monash
 mortgage,whois.rightside.co
 moscow,whois.nic.moscow
@@ -299,16 +310,19 @@ museum,whois.museum
 mx,whois.mx
 my,whois.domainregistry.my
 na,whois.na-nic.com.na
+nagoya,whois.nic.nagoya
 name,whois.nic.name
 navy,whois.rightside.co
 nc,whois.nc
 net,whois.verisign-grs.com
+neustar,whois.nic.neustar
 nf,whois.nic.nf
 ng,whois.nic.net.ng
 ninja,whois.unitedtld.com
 nl,whois.domain-registry.nl
 no,whois.norid.no
 nu,whois.iis.nu
+nyc,whois.nic.nyc
 nz,whois.srs.net.nz
 okinawa,whois.nic.okinawa
 om,whois.registry.om
@@ -343,6 +357,7 @@ pt,whois.dns.pt
 pub,whois.unitedtld.com
 pw,whois.nic.pw
 qa,whois.registry.qa
+qpon,whois.nic.qpon
 quebec,whois.quebec.rs.corenic.net
 re,whois.nic.re
 recipes,whois.donuts.co
@@ -350,6 +365,7 @@ red,whois.afilias.net
 rehab,whois.rightside.co
 reise,whois.nic.reise
 reisen,whois.donuts.co
+ren,whois.nic.ren
 rentals,whois.donuts.co
 repair,whois.donuts.co
 report,whois.donuts.co
@@ -364,6 +380,7 @@ rodeo,whois-dub.mm-registry.com
 rs,whois.rnids.rs
 ru,whois.tcinet.ru
 ruhr,whois.nic.ruhr
+ryukyu,whois.nic.ryukyu
 sa,whois.nic.net.sa
 saarland,whois.ksregistry.net
 sb,whois.nic.net.sb
@@ -386,6 +403,7 @@ sn,whois.nic.sn
 so,whois.nic.so
 social,whois.unitedtld.com
 software,whois.rightside.co
+sohu,whois.nic.sohu
 solar,whois.donuts.co
 solutions,whois.donuts.co
 soy,domain-registry-whois.l.google.com
@@ -416,10 +434,12 @@ tm,whois.nic.tm
 tn,whois.ati.tn
 to,whois.tonic.to
 today,whois.donuts.co
+tokyo,whois.nic.tokyo
 tools,whois.donuts.co
 town,whois.donuts.co
 toys,whois.donuts.co
 tr,whois.nic.tr
+trade,whois.nic.trade
 training,whois.donuts.co
 travel,whois.nic.travel
 tv,tvwhois.verisign-grs.com
@@ -429,6 +449,7 @@ ua,whois.ua
 ug,whois.co.ug
 uk,whois.nic.uk
 university,whois.donuts.co
+uno,whois.nic.uno
 us,whois.nic.us
 uy,whois.nic.org.uy
 uz,whois.cctld.uz
@@ -453,6 +474,7 @@ voyage,whois.donuts.co
 vu,vunic.vu
 wang,whois.gtld.knet.cn
 watch,whois.donuts.co
+webcam,whois.nic.webcam
 website,whois.nic.website
 wed,whois.nic.wed
 wf,whois.nic.wf
@@ -465,6 +487,7 @@ wtf,whois.donuts.co
 xxx,whois.nic.xxx
 xyz,whois.nic.xyz
 yachts,whois.afilias-srs.net
+yokohama,whois.nic.yokohama
 yt,whois.nic.yt
 zm,whois.nic.zm
 zone,whois.donuts.co
