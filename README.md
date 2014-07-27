@@ -1,7 +1,5 @@
 # lookup-whois-server
 
-WHOIS server from gTLD
-
 ## lookup.sh
 
 lookup WHOIS server from gTLD string.
@@ -50,3 +48,52 @@ gTLD
 ...
 </code></pre>
 
+## OTHER FILES
+
+### gtld.list
+
+gTLD list for lookup by *create-db.sh* (REQUIRE)
+
+<pre><code>gTLD
+gTLD
+gTLD
+...
+</code></pre>
+
+### gtld-deny.list
+
+gTLD list for not lookup by *create-db.sh*
+
+<pre><code>gTLD
+gTLD
+gTLD
+...
+</code></pre>
+
+### unknown.list
+
+created by *create-db.sh* from `> unknown.list`
+
+records are gTLD that failed lookup
+
+<pre><code>gTLD
+gTLD
+gTLD
+...
+</code></pre>
+
+### whois-servers.csv
+
+created by *create-db.sh*
+
+records are gTLD and WHOIS server's address that succeed lookup
+
+<pre><code>gTLD,whois-server's address
+gTLD,whois-server's address
+gTLD,whois-server's address
+...
+</code></pre>
+
+## AUTHOR
+
+[indeep-xyz](http://indeep.xyz/)
