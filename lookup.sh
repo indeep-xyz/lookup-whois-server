@@ -6,7 +6,7 @@
 # USAGE:
 #   $ lookup.sh [gTLD]
 #
-#   if detected gTLD then `echo [WHOIS-server's address]`
+#   if detected gTLD then `echo "WHOIS-server's address"`
 #   if could not detect gTLD then `echo ""`
 #
 
