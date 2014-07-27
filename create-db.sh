@@ -7,15 +7,20 @@
 # USAGE:
 #   $ create-db.sh
 #
-#   write to ./whois-servers.csv
-#   format (CSV)
-#   -
+#   if succeeded to lookup gTLD then write to ./whois-servers.csv
+#   - format
 #   [gTLD],[whois-server's address]
+#   [gTLD],[whois-server's address]
+#   [gTLD],[whois-server's address]
+#   ...
 #
-#   could not detect gTLD to <STDOUT>
-#   format
-#   -
+#   if failed to lookup gTLD then write to <STDOUT>
+#   you can using pipe and write to file, etc...
+#   - format
 #   [gTLD]
+#   [gTLD]
+#   [gTLD]
+#   ...
 #
 
 # - - - - - - - - - - - - - - - - - -
