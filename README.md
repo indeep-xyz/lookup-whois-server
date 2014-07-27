@@ -60,7 +60,7 @@ gTLD
 ...
 </code></pre>
 
-### gtld-deny.list
+### gtld-ignore.list
 
 gTLD list for not lookup by *create-db.sh*
 

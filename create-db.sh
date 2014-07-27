@@ -79,7 +79,7 @@ function push_routine() {
 #
 # depend variables
 # $GTLD_LIST      ... list for gTLD
-# $GTLD_DENY_LIST ... deny list for gTLD
+# $GTLD_IGNORE_LIST ... deny list for gTLD
 # $DB_MAIN        ... existing database made by this script
 #
 # echo
@@ -99,7 +99,7 @@ function get_list() {
     # if exists
     # - echo non-existence gTLD string
 
-    db="`cat "$DB_MAIN" "$GTLD_DENY_LIST" | sed 's/,.*$//'`"
+    db="`cat "$DB_MAIN" "$GTLD_IGNORE_LIST" | sed 's/,.*$//'`"
 
     echo -e "$gl" | while read gtld;
     do
@@ -171,7 +171,7 @@ function create() {
 readonly MY_DIR="`readlink -f "$0" | sed 's#/[^/]*$##'`"
 readonly BIN_LOOKUP="$MY_DIR/lookup.sh"
 readonly GTLD_LIST="$MY_DIR/gtld.list"
-readonly GTLD_DENY_LIST="$MY_DIR/gtld-deny.list"
+readonly GTLD_IGNORE_LIST="$MY_DIR/gtld-ignore.list"
 
 # output file
 readonly DB_FILENAME=whois-servers.csv
