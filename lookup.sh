@@ -1,13 +1,13 @@
 #!/bin/bash
 #
 # SUMMARY
-#   lookup WHOIS server from gTLD string
+#   lookup WHOIS server from TLD string
 #
 # USAGE:
-#   $ lookup.sh [gTLD]
+#   $ lookup.sh [TLD]
 #
-#   if detected gTLD then `echo "WHOIS-server's address"`
-#   if could not detect gTLD then `echo ""`
+#   if detected TLD then `echo "WHOIS-server's address"`
+#   if could not detect TLD then `echo ""`
 #
 
 
@@ -19,7 +19,7 @@
 # lookup by *.whois-servers.net
 #
 # args
-# $1 ... gTLD string
+# $1 ... TLD string
 function lookup_wsnet() {
 
   local server=
@@ -39,7 +39,7 @@ function lookup_wsnet() {
 # lookup by whois.iana.org
 #
 # args
-# $1 ... gTLD string
+# $1 ... TLD string
 function lookup_iana() {
 
   # - check by telnet with port 43
@@ -51,7 +51,7 @@ function lookup_iana() {
 # __buggy
 #
 # args
-# $1 ... gTLD string
+# $1 ... TLD string
 function lookup_nic() {
 
   # - check by telnet with port 43
@@ -71,10 +71,10 @@ fi
 # main
 
 # args
-# $1 ... gTLD string
+# $1 ... TLD string
 #
 # echo
-# domain name for passed gTLD
+# domain name for passed TLD
 
 WS=
 

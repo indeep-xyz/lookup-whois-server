@@ -1,25 +1,25 @@
 #!/bin/bash
 #
 # SUMMARY
-#   create database of whois-servers by gTLD string
-#   require 'gtld.list' at the same location as this script
+#   create database of whois-servers by TLD string
+#   require 'tld.list' at the same location as this script
 #
 # USAGE:
 #   $ create-db.sh
 #
-#   if succeeded to lookup gTLD then write to ./whois-servers.csv
+#   if succeeded to lookup TLD then write to ./whois-servers.csv
 #   - format
-#   [gTLD],[whois-server's address]
-#   [gTLD],[whois-server's address]
-#   [gTLD],[whois-server's address]
+#   [TLD],[whois-server's address]
+#   [TLD],[whois-server's address]
+#   [TLD],[whois-server's address]
 #   ...
 #
-#   if failed to lookup gTLD then write to <STDOUT>
+#   if failed to lookup TLD then write to <STDOUT>
 #   you can using pipe and write to file, etc...
 #   - format
-#   [gTLD]
-#   [gTLD]
-#   [gTLD]
+#   [TLD]
+#   [TLD]
+#   [TLD]
 #   ...
 #
 
@@ -51,42 +51,42 @@ function push() {
 # push routine
 #
 # args
-# $1 ... gTLD string
+# $1 ... TLD string
 # $2 ... database path for push
 function push_routine() {
 
-  local gtld="$1"
+  local tld="$1"
   local db="$2"
-  local ws="`$BIN_LOOKUP $gtld`"
+  local ws="`$BIN_LOOKUP $tld`"
 
   # check return value
   if [ -n "$ws" ]; then
 
     # if not empty
     # - push to database file
-    push "$db" "$gtld,$ws"
+    push "$db" "$tld,$ws"
   else
 
     # if empty (lookup failure)
     # - echo
-    echo $gtld
+    echo $tld
   fi
 }
 
 # = =
-# get gTLD list
-# if exists in database, excluding gTLD
+# get TLD list
+# if exists in database, excluding TLD
 #
 # depend variables
-# $GTLD_LIST      ... list for gTLD
-# $GTLD_IGNORE_LIST ... deny list for gTLD
+# $TLD_LIST      ... list for TLD
+# $TLD_IGNORE_LIST ... deny list for TLD
 # $DB_MAIN        ... existing database made by this script
 #
 # echo
-# line separated gTLD string
+# line separated TLD string
 function get_list() {
 
-  local gl="`cat "$GTLD_LIST"`"
+  local gl="`cat "$TLD_LIST"`"
   local db=
 
   # check database file
@@ -97,14 +97,14 @@ function get_list() {
   else
 
     # if exists
-    # - echo non-existence gTLD string
+    # - echo non-existence TLD string
 
-    db="`cat "$DB_MAIN" "$GTLD_IGNORE_LIST" | sed 's/,.*$//'`"
+    db="`cat "$DB_MAIN" "$TLD_IGNORE_LIST" | sed 's/,.*$//'`"
 
-    echo -e "$gl" | while read gtld;
+    echo -e "$gl" | while read tld;
     do
-      if ! echo -e "$db" | grep -q "^$gtld"; then
-        echo $gtld
+      if ! echo -e "$db" | grep -q "^$tld"; then
+        echo $tld
       fi
     done
   fi
@@ -119,7 +119,7 @@ function get_list() {
 #                 if setted, does not exclude by database's value
 #
 # echo
-# line separated gTLD string
+# line separated TLD string
 function create() {
 
   local db_temp="${DB_MAIN}.~temp"
@@ -138,10 +138,10 @@ function create() {
   [ -f "$DB_MAIN" ] && cp $DB_MAIN $db_temp
 
   # main
-  echo -e "$gl" | while read gtld;
+  echo -e "$gl" | while read tld;
   do
 
-    push_routine $gtld "$db_temp" &
+    push_routine $tld "$db_temp" &
     let ch_used++
 
     if [ $ch_used -gt $CH_MAX ]; then
@@ -170,8 +170,8 @@ function create() {
 
 readonly MY_DIR="`readlink -f "$0" | sed 's#/[^/]*$##'`"
 readonly BIN_LOOKUP="$MY_DIR/lookup.sh"
-readonly GTLD_LIST="$MY_DIR/gtld.list"
-readonly GTLD_IGNORE_LIST="$MY_DIR/gtld-ignore.list"
+readonly TLD_LIST="$MY_DIR/tld.list"
+readonly TLD_IGNORE_LIST="$MY_DIR/tld-ignore.list"
 
 # output file
 readonly DB_FILENAME=whois-servers.csv
@@ -195,9 +195,9 @@ done
 # - - - - - - - - - - - - - - - - - -
 # guard
 
-# require gTLD list file
-if [ ! -s "$GTLD_LIST" ]; then
-  echo "require gTLD list file. ---> $GTLD_LIST"
+# require TLD list file
+if [ ! -s "$TLD_LIST" ]; then
+  echo "require TLD list file. ---> $TLD_LIST"
   exit 1
 fi
 
